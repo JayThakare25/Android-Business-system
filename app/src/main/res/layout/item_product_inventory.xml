@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tv_product_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_product_price" />
+
+        <TextView
+            android:id="@+id/tv_product_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$0.00"
+            android:textSize="18sp"
+            android:textColor="?colorPrimary"
+            android:textStyle="bold"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_restock_product"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_product_stock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Stock: 10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_product_name" />
+
+        <TextView
+            android:id="@+id/tv_low_stock_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOW STOCK"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/tv_product_stock"
+            app:layout_constraintTop_toTopOf="@id/tv_product_stock"
+            app:layout_constraintBottom_toBottomOf="@id/tv_product_stock"/>
+            
+        <ImageButton
+            android:id="@+id/btn_restock_product"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_input_add"
+            app:tint="?attr/colorPrimary"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Restock Product"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_delete_product"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_product"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_delete"
+            app:tint="@android:color/holo_red_dark"
+            android:background="?selectableItemBackgroundBorderless"
+            android:contentDescription="Delete Product"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+            
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

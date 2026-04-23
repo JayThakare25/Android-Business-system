@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Android Business System</string>
+
+    <!-- Navigation Tabs -->
+    <string name="tab_dashboard">Dashboard</string>
+    <string name="tab_inventory">Inventory</string>
+    <string name="tab_pos">POS</string>
+    <string name="tab_finance">Finance</string>
+    <string name="tab_hr">HR</string>
+    
+    <!-- AI Assistant -->
+    <string name="ai_assistant_title">Gemini Business Assistant</string>
+    <string name="ai_greeting">Hello! I am your AI. How can I help you optimize operations today?</string>
+    <string name="ai_hint">Ask about sales, stock, etc...</string>
+    <string name="fab_ask_ai">Ask Gemini AI</string>
+    
+    <!-- CRM & Reports -->
+    <string name="crm_title">Customer Roster</string>
+    <string name="reports_title">System Reports Engine</string>
+    <string name="btn_crm">CRM Profile</string>
+    <string name="btn_reports">Data Reports</string>
+    
+    <!-- Finance & HR -->
+    <string name="finance_title">Financial Overview</string>
+    <string name="net_profit">Net Profit/Loss (Current Period)</string>
+    <string name="btn_kiosk">Launch Kiosk Check-In</string>
+    <string name="hr_roster">Employee Roster</string>
+</resources>

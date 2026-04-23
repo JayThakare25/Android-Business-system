@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Invoice Header -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ANDROID BUSINESS SYSTEM"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:text="INVOICE"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorPrimary"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="#EEEEEE"/>
+
+            <!-- Statement Info -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ISSUED TO:" android:textSize="10sp" android:textColor="#999999"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="The Corporate Board" android:textSize="14sp" android:textColor="#333333" android:textStyle="bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="end">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="REPORT DATE:" android:textSize="10sp" android:textColor="#999999"/>
+                    <TextView android:id="@+id/tv_invoice_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Oct 24, 2023" android:textSize="14sp" android:textColor="#333333" android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="FINANCIAL STATEMENT BREAKDOWN"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="?attr/colorPrimary"/>
+
+            <!-- Itemized Table Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingBottom="8dp"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="DESCRIPTION" android:textSize="10sp" android:textStyle="bold" android:textColor="#666666"/>
+                <TextView android:layout_width="80dp" android:layout_height="wrap_content" android:text="AMOUNT" android:textSize="10sp" android:textStyle="bold" android:textColor="#666666" android:gravity="end"/>
+            </LinearLayout>
+            <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#EEEEEE"/>
+
+            <!-- Table Rows -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Total Point-of-Sale Revenue" android:textSize="13sp" android:textColor="#333333"/>
+                <TextView android:id="@+id/tv_invoice_revenue" android:layout_width="80dp" android:layout_height="wrap_content" android:text="$0.00" android:textSize="13sp" android:textColor="#333333" android:gravity="end"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Total Operational Costs (Expenses)" android:textSize="13sp" android:textColor="#333333"/>
+                <TextView android:id="@+id/tv_invoice_expenses" android:layout_width="80dp" android:layout_height="wrap_content" android:text="-$0.00" android:textSize="13sp" android:textColor="@android:color/holo_red_dark" android:gravity="end"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="#333333"/>
+
+            <!-- Grand Total -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="NET SURPLUS / (DEFICIT)" android:textSize="14sp" android:textStyle="bold" android:textColor="#000000"/>
+                <TextView android:id="@+id/tv_invoice_profit" android:layout_width="80dp" android:layout_height="wrap_content" android:text="$0.00" android:textSize="16sp" android:textStyle="bold" android:textColor="?attr/colorPrimary" android:gravity="end"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="* This document is a digitally generated financial snapshot for administrative purposes."
+                android:textSize="9sp"
+                android:textColor="#999999"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:textStyle="italic"/>
+
+            <Button
+                android:id="@+id/btn_close_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="CLOSE PREVIEW"
+                style="@style/Widget.MaterialComponents.Button.TextButton" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.core.widget.NestedScrollView>

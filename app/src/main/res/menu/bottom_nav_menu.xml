@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/dashboardFragment"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_dashboard" />
+    <item
+        android:id="@+id/inventoryFragment"
+        android:title="Inventory"
+        android:icon="@drawable/ic_inventory" />
+    <item
+        android:id="@+id/salesFragment"
+        android:title="POS"
+        android:icon="@drawable/ic_pos" />
+    <item
+        android:id="@+id/financeFragment"
+        android:title="Finance"
+        android:icon="@drawable/ic_finance" />
+    <item
+        android:id="@+id/hrFragment"
+        android:title="HR"
+        android:icon="@drawable/ic_hr" />
+</menu>

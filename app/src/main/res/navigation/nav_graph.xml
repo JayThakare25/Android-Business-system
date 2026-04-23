@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.abs.app.presentation.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboard_to_crm"
+            app:destination="@id/crmFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_reports"
+            app:destination="@id/reportsFragment" />
+        <action
+            android:id="@+id/action_dashboard_to_inventory"
+            app:destination="@id/inventoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inventoryFragment"
+        android:name="com.abs.app.presentation.inventory.InventoryFragment"
+        android:label="Inventory"
+        tools:layout="@layout/fragment_inventory" />
+
+    <fragment
+        android:id="@+id/salesFragment"
+        android:name="com.abs.app.presentation.sales.SalesFragment"
+        android:label="POS"
+        tools:layout="@layout/fragment_sales" />
+
+    <fragment
+        android:id="@+id/financeFragment"
+        android:name="com.abs.app.presentation.finance.FinanceFragment"
+        android:label="Finance"
+        tools:layout="@layout/fragment_finance" />
+
+    <fragment
+        android:id="@+id/hrFragment"
+        android:name="com.abs.app.presentation.hr.HRFragment"
+        android:label="HR"
+        tools:layout="@layout/fragment_hr" />
+
+    <fragment
+        android:id="@+id/crmFragment"
+        android:name="com.abs.app.presentation.crm.CrmFragment"
+        android:label="CRM"
+        tools:layout="@layout/fragment_crm" />
+        
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.abs.app.presentation.reports.ReportsFragment"
+        android:label="Reports"
+        tools:layout="@layout/fragment_reports" />
+
+</navigation>
